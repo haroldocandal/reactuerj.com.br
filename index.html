@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>React UERJ</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Config Custom Colors & Fonts -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="min-h-screen bg-background">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- LOGO -->
+        <a href="index.html">
+          <img src="assets/mlK0azk.jpeg" alt="Logo React UERJ" class="h-9 w-9 rounded-full object-cover" />
+        </a>
+
+        <!-- Menu para Desktop -->
+        <nav class="hidden md:flex items-center space-x-2">
+          <!-- Active Link styled with purple -->
+          <a href="index.html"
+            class="px-3 py-2 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+            Início
+          </a>
+          <a href="equipe.html"
+            class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Equipe
+          </a>
+          <a href="registros.html"
+            class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Registros
+          </a>
+          <a href="eventos.html"
+            class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Eventos
+          </a>
+          <a href="contato.html"
+            class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Contato
+          </a>
+        </nav>
+
+        <!-- Botão do Menu Mobile -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-gray-800 block"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-gray-800 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-inner">
+      <nav class="flex flex-col items-center space-y-2 pt-2 px-4">
+        <a href="index.html"
+          class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+          Início
+        </a>
+        <a href="equipe.html"
+          class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Equipe
+        </a>
+        <a href="registros.html"
+          class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Registros
+        </a>
+        <a href="eventos.html"
+          class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Eventos
+        </a>
+        <a href="contato.html"
+          class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (HOME) ==================== -->
+  <main>
+    <div class="min-h-screen bg-gray-50">
+
+      <!-- HERO AREA -->
+      <section class="relative h-[50vh] flex items-center justify-center text-white text-center overflow-hidden">
+        <video src="assets/zAvbcql.mp4" autoplay loop muted playsinline id="home-video"
+          class="absolute top-0 left-0 w-full h-full object-cover z-0"></video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
+
+        <div class="relative z-20 px-4">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4 h-16 md:h-20 flex justify-center items-end">
+            <span id="typewriter-text"></span>
+          </h1>
+
+          <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-200">
+            Levando a ciência até você: experimentos, divulgação científica e visitas escolares.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="eventos.html"
+              class="px-8 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
+              Próximos Eventos
+            </a>
+            <a href="contato.html"
+              class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-colors">
+              Leve a REACT para sua escola
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE DO -->
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-gray-900">O Que Fazemos?</h2>
+            <p class="mt-4 text-lg text-gray-600">
+              Nossas atividades são pensadas para conectar a universidade com a comunidade.
+            </p>
+            <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="school" class="w-8 h-8 text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Visitações</h3>
+              <p class="text-gray-600">Levamos oficinas e experimentos interativos para escolas públicas e privadas,
+                adaptados para diferentes níveis de ensino.</p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="megaphone" class="w-8 h-8 text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Divulgação Científica</h3>
+              <p class="text-gray-600">Criamos conteúdo, participamos de feiras de ciências e organizamos eventos
+                abertos para desmistificar a ciência.</p>
+            </div>
+
+            <div
+              class="bg-white p-8 rounded-xl shadow-lg text-center transform hover:-translate-y-2 transition-transform duration-300">
+              <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="flask-conical" class="w-8 h-8 text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-800 mb-3">Experimentos Práticos</h3>
+              <p class="text-gray-600">Desenvolvemos e aplicamos experimentos de baixo custo que podem ser replicados,
+                incentivando o aprendizado mão na massa.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- MISSION SECTION -->
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Nossa Missão</h2>
+            <div class="prose prose-lg text-gray-700 space-y-4">
+              <p>
+                O projeto REACT nasceu do desejo de democratizar o acesso ao conhecimento científico,
+                mostrando que a ciência pode ser divertida, acessível e transformadora.
+              </p>
+              <p>
+                Acreditamos que, ao conectar a UERJ com a sociedade, podemos inspirar futuros cientistas,
+                apoiar a formação de professores e fortalecer a educação básica em nossa comunidade.
+              </p>
+            </div>
+            <a href="registros.html"
+              class="inline-flex items-center mt-8 text-blue-600 font-semibold hover:text-blue-800 transition-colors">
+              Veja nossos registros de atividades
+              <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
+            </a>
+          </div>
+          <div>
+            <img
+              src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Alunos participando de um experimento científico"
+              class="rounded-xl shadow-2xl w-full h-auto object-cover" />
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM PREVIEW SECTION -->
+      <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-3xl font-bold text-gray-900">Conheça Nossa Equipe</h2>
+          <div class="flex justify-center -space-x-4 mt-8 mb-8">
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center bg-blue-500 text-white text-xl font-bold border-4 border-white shadow-md">
+              JS
+            </div>
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center bg-blue-500 text-white text-xl font-bold border-4 border-white shadow-md">
+              JP
+            </div>
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center bg-blue-500 text-white text-xl font-bold border-4 border-white shadow-md">
+              HC
+            </div>
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center bg-blue-500 text-white text-xl font-bold border-4 border-white shadow-md">
+              VS
+            </div>
+          </div>
+          <a href="equipe.html"
+            class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all">
+            Ver equipe completa
+          </a>
+        </div>
+      </section>
+
+      <!-- CALL TO ACTION SECTION -->
+      <section class="bg-blue-700 text-white">
+        <div class="max-w-4xl mx-auto text-center py-16 px-4 sm:px-6 lg:px-8">
+          <div class="mt-8">
+            <a href="contato.html"
+              class="inline-block px-10 py-4 bg-white text-blue-700 font-bold rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+              Entre em Contato
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Script initialization for Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+  <!-- Custom user script -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>

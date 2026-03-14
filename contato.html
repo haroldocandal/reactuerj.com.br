@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Contato - React UERJ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="min-h-screen bg-background">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html">
+          <img 
+            src="assets/mlK0azk.jpeg" 
+            alt="Logo React UERJ" 
+            class="h-9 w-9 rounded-full object-cover" 
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Início
+          </a>
+          <a href="equipe.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Equipe
+          </a>
+          <a href="registros.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Registros
+          </a>
+          <a href="eventos.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Eventos
+          </a>
+          <!-- Active Link styled with purple -->
+          <a href="contato.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+            Contato
+          </a>
+        </nav>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-gray-800 block"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-gray-800 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-inner">
+      <nav class="flex flex-col items-center space-y-2 pt-2 px-4">
+        <a href="index.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Início
+        </a>
+        <a href="equipe.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Equipe
+        </a>
+        <a href="registros.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Registros
+        </a>
+        <a href="eventos.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Eventos
+        </a>
+        <a href="contato.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (CONTATO) ==================== -->
+  <main>
+    <div class="bg-white py-20 min-h-screen">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Entre em Contato</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Adoraríamos ouvir você! Seja para agendar uma visita, tirar dúvidas ou propor parcerias.
+          </p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          <!-- Coluna da Esquerda: Informações e Formulário -->
+          <div class="space-y-12">
+            <!-- Bloco de Informações de Contato -->
+            <div class="space-y-8">
+              
+              <!-- Email -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="mail" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800">E-mail</h3>
+                  <p class="text-gray-600">Para dúvidas e agendamentos.</p>
+                  <a href="mailto:react.uerj@gmail.com" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    react.uerj@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- Instagram -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="instagram" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800">Instagram</h3>
+                  <p class="text-gray-600">Acompanhe nossas atividades e fotos.</p>
+                  <a href="https://www.instagram.com/react.uerj" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                    @react.uerj
+                  </a>
+                </div>
+              </div>
+
+              <!-- Endereço -->
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                  <i data-lucide="map-pin" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-800">Endereço</h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Universidade do Estado do Rio de Janeiro (UERJ) <br />
+                    R. São Francisco Xavier, 524 - Maracanã, <br />
+                    Rio de Janeiro - RJ, 20550-013
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Coluna da Direita: Mapa -->
+          <div class="h-[450px] lg:h-full min-h-[450px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.188731998333!2d-43.23235378443917!3d-22.90647334358895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e592758231f%3A0x6b3b0544f364e727!2sUniversidade%20do%20Estado%20do%20Rio%20de%20Janeiro%20-%20Campus%20Maracan%C3%A3!5e0!3m2!1spt-BR!2sbr!4v1663183574889!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="100%"
+              style="border: 0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="rounded-xl shadow-lg w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

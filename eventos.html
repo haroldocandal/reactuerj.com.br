@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Eventos - React UERJ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="min-h-screen bg-background">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html">
+          <img 
+            src="assets/mlK0azk.jpeg" 
+            alt="Logo React UERJ" 
+            class="h-9 w-9 rounded-full object-cover" 
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Início
+          </a>
+          <a href="equipe.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Equipe
+          </a>
+          <a href="registros.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Registros
+          </a>
+          <!-- Active Link styled with purple -->
+          <a href="eventos.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+            Eventos
+          </a>
+          <a href="contato.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Contato
+          </a>
+        </nav>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-gray-800 block"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-gray-800 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-inner">
+      <nav class="flex flex-col items-center space-y-2 pt-2 px-4">
+        <a href="index.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Início
+        </a>
+        <a href="equipe.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Equipe
+        </a>
+        <a href="registros.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Registros
+        </a>
+        <a href="eventos.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+          Eventos
+        </a>
+        <a href="contato.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (EVENTOS) ==================== -->
+  <main>
+    <div class="bg-gray-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+            Próximos Eventos
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Fique por dentro das nossas atividades, palestras, oficinas e eventos abertos à comunidade.
+          </p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Lista de Eventos -->
+        <div class="space-y-8">
+          
+          <!-- Event Status Closed: bg-gray-100 text-gray-800 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="md:flex">
+              <!-- Imagem do Evento -->
+              <div class="md:w-2/5">
+                <img
+                  src="assets/jvuWjam.png"
+                  alt="Visita"
+                  class="w-full h-64 md:h-full object-cover"
+                />
+              </div>
+
+              <!-- Conteúdo do Evento -->
+              <div class="p-6 md:p-8 md:w-3/5">
+                <!-- Status e Título -->
+                <div class="mb-4">
+                  <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gray-100 text-gray-800">
+                    Encerrado
+                  </span>
+                  <h2 class="text-2xl font-bold text-gray-900 mt-3">
+                    Visita
+                  </h2>
+                </div>
+
+                <!-- Informações do Evento -->
+                <div class="space-y-3 mb-6">
+                  <div class="flex items-start gap-3 text-gray-700">
+                    <i data-lucide="calendar" class="w-5 h-5 mt-0.5 text-blue-600 flex-shrink-0"></i>
+                    <div>
+                      <p class="font-medium">21/10/2025</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3 text-gray-700">
+                    <i data-lucide="clock" class="w-5 h-5 mt-0.5 text-blue-600 flex-shrink-0"></i>
+                    <p>14h00</p>
+                  </div>
+
+                  <div class="flex items-start gap-3 text-gray-700">
+                    <i data-lucide="map-pin" class="w-5 h-5 mt-0.5 text-blue-600 flex-shrink-0"></i>
+                    <p>Laboratório de Química Geral e Inorgânica - UERJ</p>
+                  </div>
+
+                  <div class="flex items-start gap-3 text-gray-700">
+                    <i data-lucide="users" class="w-5 h-5 mt-0.5 text-blue-600 flex-shrink-0"></i>
+                    <div>
+                      <p>Alunos do projeto amor em educar</p>
+                      <p class="text-sm text-gray-500"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Descrição -->
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                  Apresentação do ambiente universitário, com aulas experimentais e divulgação científica.
+                </p>
+
+                <!-- Botão de Inscrição (No button rendered here because status === 'closed') -->
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl shadow-lg p-8 md:p-12 text-center text-white">
+          <h2 class="text-3xl font-bold mb-4">
+            Quer trazer sua escola ou grupo?
+          </h2>
+          <p class="text-lg mb-6 text-blue-50 max-w-2xl mx-auto">
+            Realizamos visitas, oficinas e palestras personalizadas para escolas e instituições. 
+            Entre em contato conosco para agendar uma atividade!
+          </p>
+          <a
+            href="contato.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-medium transition-colors"
+          >
+            Fale Conosco
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Registros - React UERJ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="min-h-screen bg-background">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html">
+          <img 
+            src="assets/mlK0azk.jpeg" 
+            alt="Logo React UERJ" 
+            class="h-9 w-9 rounded-full object-cover" 
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Início
+          </a>
+          <a href="equipe.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Equipe
+          </a>
+          <!-- Active Link styled with purple -->
+          <a href="registros.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+            Registros
+          </a>
+          <a href="eventos.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Eventos
+          </a>
+          <a href="contato.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Contato
+          </a>
+        </nav>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-gray-800 block"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-gray-800 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-inner">
+      <nav class="flex flex-col items-center space-y-2 pt-2 px-4">
+        <a href="index.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Início
+        </a>
+        <a href="equipe.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Equipe
+        </a>
+        <a href="registros.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+          Registros
+        </a>
+        <a href="eventos.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Eventos
+        </a>
+        <a href="contato.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (REGISTROS) ==================== -->
+  <main>
+    <div class="bg-gray-50 py-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Cabeçalho da Página -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">
+            Registros de Eventos
+          </h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Acompanhe os momentos especiais das nossas atividades de extensão e divulgação científica.
+          </p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Lista de Eventos -->
+        <div class="space-y-8">
+          
+          <!-- EVENT CARD 1 -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+            <div class="p-6 md:p-8">
+              <div class="mb-6">
+                <div class="flex items-center gap-3 mb-2">
+                  <h2 class="text-3xl font-bold text-gray-900">Visita do Colégio Elite à UERJ</h2>
+                </div>
+                <p class="text-blue-600 font-medium">Setembro de 2024</p>
+              </div>
+
+              <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                Confira os momentos!
+              </p>
+
+              <!-- Photo Carousel Container -->
+              <!-- Pass JSON data string for Vanilla JS to initialize -->
+              <div 
+                class="photo-carousel-container relative w-full" 
+                data-photos='["assets/2lv4cnj.png","assets/l1Uzsn7.png","assets/cNdZDjB.png","assets/sgQJTIi.png","assets/iMKPFBX.png","assets/CD8WMpw.png","assets/WS3Co5a.png","assets/pqtCXfS.png","assets/oDCm1xg.png","assets/Za5ayqF.png","assets/R4KoISs.png","assets/86as40K.png"]'
+              >
+                
+                <div class="relative w-full h-96 md:h-[500px] bg-black rounded-lg overflow-hidden shadow-lg">
+                  <img
+                    src="assets/2lv4cnj.png"
+                    alt="Foto principal do carrossel"
+                    class="carousel-main-img w-full h-full object-contain transition-opacity duration-300"
+                  />
+
+                  <!-- Nav Buttons -->
+                  <button class="btn-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all hover:scale-110" aria-label="Foto anterior">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                  </button>
+                  <button class="btn-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all hover:scale-110" aria-label="Próxima foto">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                  </button>
+
+                  <!-- Indicator -->
+                  <div class="carousel-counter absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm">
+                    1 / 12
+                  </div>
+                </div>
+
+                <!-- Thumbnails Container (populated by script.js) -->
+                <div class="carousel-thumbnails flex gap-2 mt-4 overflow-x-auto pb-2">
+                  <!-- JS appends here based on data-photos -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- /EVENT CARD 1 -->
+
+        </div>
+
+        <!-- Mensagem de Rodapé -->
+        <div class="mt-16 text-center bg-blue-50 p-8 rounded-lg">
+          <p class="text-gray-700">
+            <span class="font-semibold">Quer adicionar suas fotos?</span><br />
+            Entre em contato conosco para compartilhar os momentos do seu evento com a comunidade!
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

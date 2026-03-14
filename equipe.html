@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="no-referrer">
+  <title>Equipe - React UERJ</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            background: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body class="min-h-screen bg-background">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <a href="index.html">
+          <img 
+            src="assets/mlK0azk.jpeg" 
+            alt="Logo React UERJ" 
+            class="h-9 w-9 rounded-full object-cover" 
+          />
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-2">
+          <a href="index.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Início
+          </a>
+          <!-- Active Link styled with purple -->
+          <a href="equipe.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+            Equipe
+          </a>
+          <a href="registros.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Registros
+          </a>
+          <a href="eventos.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Eventos
+          </a>
+          <a href="contato.html" class="px-3 py-2 rounded-md font-medium transition-colors duration-200 text-gray-600 hover:bg-gray-200 hover:text-gray-800">
+            Contato
+          </a>
+        </nav>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6 text-gray-800 block"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 text-gray-800 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 shadow-inner">
+      <nav class="flex flex-col items-center space-y-2 pt-2 px-4">
+        <a href="index.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Início
+        </a>
+        <a href="equipe.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 bg-purple-600 text-white shadow-sm">
+          Equipe
+        </a>
+        <a href="registros.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Registros
+        </a>
+        <a href="eventos.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Eventos
+        </a>
+        <a href="contato.html" class="w-full text-center px-4 py-3 rounded-md font-medium transition-colors duration-200 text-gray-700 hover:bg-gray-200">
+          Contato
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==================== MAIN CONTENT (EQUIPE) ==================== -->
+  <main>
+    <div class="bg-gray-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Cabeçalho da Seção -->
+        <div class="text-center mb-16">
+          <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Nossa Equipe REACT</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            Conheça as pessoas dedicadas que fazem o Projeto REACT acontecer.
+          </p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-6"></div>
+        </div>
+
+        <!-- Grade de Membros da Equipe -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          
+          <!-- Juliana -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/wNrGRt4.png" alt="Juliana Fonseca" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Juliana Fonseca</h3>
+            <p class="text-blue-600 font-medium">Professores</p>
+            <p class="text-gray-500 text-sm mt-1">DQGI / IQ UERJ</p>
+          </div>
+
+          <!-- Júlia -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/Q0DnYy2.png" alt="Júlia Bouzon" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Júlia Bouzon</h3>
+            <p class="text-blue-600 font-medium">Professores</p>
+            <p class="text-gray-500 text-sm mt-1">DQGI / IQ UERJ</p>
+          </div>
+
+          <!-- Daphne -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/0eya2No.png" alt="Daphne Cukierman" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Daphne Cukierman</h3>
+            <p class="text-blue-600 font-medium">Professores</p>
+            <p class="text-gray-500 text-sm mt-1">DQGI / IQ UERJ</p>
+          </div>
+
+          <!-- Haroldo -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/yTNPich.png" alt="Haroldo Candal" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Haroldo Candal</h3>
+            <p class="text-blue-600 font-medium">Professores</p>
+            <p class="text-gray-500 text-sm mt-1">DFQ / IQ UERJ</p>
+          </div>
+
+          <!-- Renata -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/ycC9G40.png" alt="Renata Cordeiro" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Renata Cordeiro</h3>
+            <p class="text-blue-600 font-medium">Professores</p>
+            <p class="text-gray-500 text-sm mt-1">DQGI / IQ UERJ</p>
+          </div>
+
+          <!-- Fernanda -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/88Mc4a0.png" alt="Fernanda Águeda" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Fernanda Águeda</h3>
+            <p class="text-blue-600 font-medium">Design</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Gabriela -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/G3M3AIZ.png" alt="Gabriela de Matos" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Gabriela de Matos</h3>
+            <p class="text-blue-600 font-medium">Design</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Yasmim B. -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/2m7u2Yq.png" alt="Yasmim Bonifácio" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Yasmim Bonifácio</h3>
+            <p class="text-blue-600 font-medium">Design</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Yasmim Braga -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/aRBUNeD.png" alt="Yasmim Braga" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Yasmim Braga</h3>
+            <p class="text-blue-600 font-medium">Design</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Rodrigo -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/3yX6XB4.png" alt="Rodrigo Felix" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Rodrigo Felix</h3>
+            <p class="text-blue-600 font-medium">Elaboração de posts</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Bernardo -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/jthEw5A.png" alt="Bernardo Barbosa" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Bernardo Barbosa</h3>
+            <p class="text-blue-600 font-medium">Elaboração de posts</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Pedro -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/QDNIh9i.png" alt="Pedro Liércio" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Pedro Liércio</h3>
+            <p class="text-blue-600 font-medium">Elaboração de posts</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Luiz -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/L65FJ8D.png" alt="Luiz Armando" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Luiz Armando</h3>
+            <p class="text-blue-600 font-medium">Elaboração de posts</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Romulo -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/0zO5G6E.png" alt="Romulo Felix" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Romulo Felix</h3>
+            <p class="text-blue-600 font-medium">Cronograma e formulários</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Maria Eduarda -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/qNZWFPt.png" alt="Maria Eduarda" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Maria Eduarda</h3>
+            <p class="text-blue-600 font-medium">Reels</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Mariane -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/ivr6rzI.png" alt="Mariane Meireles" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Mariane Meireles</h3>
+            <p class="text-blue-600 font-medium">Reels</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Sarah -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/4TiNhA3.png" alt="Sarah Polyana" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Sarah Polyana</h3>
+            <p class="text-blue-600 font-medium">Reels</p>
+            <p class="text-gray-500 text-sm mt-1">ENGENHARIA QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Maria Luiza -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/GO7ut7q.png" alt="Maria Luiza" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Maria Luiza</h3>
+            <p class="text-blue-600 font-medium">Reels</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Salomé -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/qf16DsQ.png" alt="Salomé Bastos" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Salomé Bastos</h3>
+            <p class="text-blue-600 font-medium">Reels</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Beatriz -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/dJvPH41.png" alt="Beatriz Araujo" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Beatriz Araujo</h3>
+            <p class="text-blue-600 font-medium">Redes sociais</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Miguel -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/6IazHm3.png" alt="Miguel Serrano" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Miguel Serrano</h3>
+            <p class="text-blue-600 font-medium">Redes sociais</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Iasmim -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/Voxaued.png" alt="Iasmim Gomes" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Iasmim Gomes</h3>
+            <p class="text-blue-600 font-medium">Redes sociais</p>
+            <p class="text-gray-500 text-sm mt-1">ENGENHARIA QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Thais -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/e02T6cV.png" alt="Thais Fernandes" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Thais Fernandes</h3>
+            <p class="text-blue-600 font-medium">Cronograma e formulários</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Ana Carolina -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/V41sfgy.png" alt="Ana Carolina Fonseca" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Ana Carolina Fonseca</h3>
+            <p class="text-blue-600 font-medium">Cronograma e formulários</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Vitória -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/n8Hldyh.png" alt="Vitória Santos" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Vitória Santos</h3>
+            <p class="text-blue-600 font-medium">Cronograma e formulários</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+          <!-- Bruno -->
+          <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+            <img src="assets/qnVEMwh.png" alt="Bruno Oliveira" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-blue-200" />
+            <h3 class="text-xl font-semibold text-gray-800">Bruno Oliveira</h3>
+            <p class="text-blue-600 font-medium">Cronograma e formulários</p>
+            <p class="text-gray-500 text-sm mt-1">QUÍMICA - UERJ</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
